@@ -5,12 +5,33 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path": "pages/mirror/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+				
+			}
+	
+		},
+		{
+			"path": "pages/day/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/friends/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"pageOrientation": "portrait"
 	}
 }
