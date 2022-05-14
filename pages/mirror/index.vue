@@ -40,11 +40,11 @@
 
 <script setup>
 	const poetStyles=['婚恋诗','战争诗','行役诗','怨刺诗','农事诗','宗庙诗','赞颂诗']
-	const tags=['国风.周南.关睱','国风.周南.关睱',
-	'国风.周南.关睱','国风.周南.关睱','国风.周南.关睱',
+	const tags=['国风.周南.关睱','国风.周南.寒光',
+	'国风.周南.关睱','国风.周南.免置','国风.周南.关睱',
 	'国风.周南.关睱','国风.周南.关睱']
 	const picStyle={
-		width:'60vw',
+		width:'45vw',
 		height:'55vh'
 	}
 </script>
@@ -89,33 +89,36 @@
 	 margin-left: 2.2rem;
 	 margin-top: 0.6rem;
  }
+ .mirror-top-main-left-content-main{
+ 	 display: flex;
+ 	 margin-top: 0.2rem;
+ }
+ .mirror-top-main-left-style{
+ 	 margin-top: 0.3rem;
+ }
+ .mirror-top-main-left-style-main{
+ 	 display: flex;
+ 	 flex-wrap: wrap;
+ }
  .mirror-top-main-right{
-	 margin-left: 1.6rem;
-	 margin-right: 1.6rem;
+	 box-sizing: border-box;
+	 width: 60vw;
+	 overflow: hidden;
+	 margin-left: 0.6rem;
+	 margin-right: 2rem;
+	 
  }
  .mirror-top-main-right-content{
 	 margin-top: 0.6rem;
  }
  .mirror-top-main-right-content-main{
+	 margin-top: 0.2rem;
 	 position: relative;
 	 box-sizing: border-box;
 	 padding: 0.4rem;
-	 margin-top: 0.2rem;
-	 width: 60vw;
 	 height: 55vh;
 	display: flex;
 	flex-wrap: wrap;
- }
- .mirror-top-main-left-content-main{
-	 display: flex;
-	 margin-top: 0.2rem;
- }
- .mirror-top-main-left-style{
-	 margin-top: 0.3rem;
- }
- .mirror-top-main-left-style-main{
-	 display: flex;
-	 flex-wrap: wrap;
  }
  #mirror-top-main-right-content-main-pic{
 	 position: absolute;

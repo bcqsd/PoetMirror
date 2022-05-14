@@ -17,11 +17,11 @@
 	})
 
 	const picStyle={
-		width:`${props.content.length/2}rem`,
+		width:`${Math.max(props.content.length/2,1.5)}rem`,
 		height:`0.7rem`
 	}
 	const topStyle={
-		width:`${props.content.length/2}rem`,
+		width:`${Math.max(props.content.length/2,1.5)}rem`,
 		height:`0.7rem`
 	}
 </script>
