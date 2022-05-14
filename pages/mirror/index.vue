@@ -1,7 +1,7 @@
 <template>
 	<view class="mirror-top">
-		<img src="" alt="">
-		<img src="" alt="">
+		<img id="mirror-top-image1" src="../../assets/buttons/返回主菜单按钮.png" alt="">
+		<img id="mirror-top-image2" src="../../assets/buttons/退出按钮.png" alt="">
 	    <view class="mirror-top-title">
 	    	<img src="../../assets/texturePics/“诗经小镜”.png" id="title">
 	    </view>
@@ -26,6 +26,10 @@
 				<view class="mirror-top-main-right-content">
 					<view>当前标签:周南</view>
 					<view class="mirror-top-main-right-content-main">
+						<image src="../../assets/patterns/中国风边框1.png" mode="scaleToFill"
+						:style="picStyle"
+						id="mirror-top-main-right-content-main-pic"
+						/>
 						<artFont v-for="item in tags" :content="item"></artFont>
 					</view>
 				</view>
@@ -36,13 +40,31 @@
 
 <script setup>
 	const poetStyles=['婚恋诗','战争诗','行役诗','怨刺诗','农事诗','宗庙诗','赞颂诗']
-	const tags=['国风.周南.关睱','国风.周南.关睱','国风.周南.关睱']
+	const tags=['国风.周南.关睱','国风.周南.关睱',
+	'国风.周南.关睱','国风.周南.关睱','国风.周南.关睱',
+	'国风.周南.关睱','国风.周南.关睱']
+	const picStyle={
+		width:'60vw',
+		height:'55vh'
+	}
 </script>
 
 <style lang="scss" scoped>
 	@font-face {
 		font-family:Semibold ;
 		src: url('../../assets/fonts/杨任东竹石体-Semibold.ttf');
+	}
+	#mirror-top-image1{
+		width: 1rem;
+		position: absolute;
+		top:1rem;
+		right:3rem;
+	}
+	#mirror-top-image2{
+		width: 1rem;
+		position: absolute;
+		top:1rem;
+		right:1.5rem;
 	}
  .mirror-top{
 	 width: 100%;
@@ -66,24 +88,23 @@
 	 width: 40vw;
 	 margin-left: 2.2rem;
 	 margin-top: 0.6rem;
-	 border: 1px solid red;
  }
  .mirror-top-main-right{
 	 margin-left: 1.6rem;
-	 margin-right: 0.8rem;
+	 margin-right: 1.6rem;
  }
  .mirror-top-main-right-content{
 	 margin-top: 0.6rem;
  }
  .mirror-top-main-right-content-main{
+	 position: relative;
+	 box-sizing: border-box;
+	 padding: 0.4rem;
 	 margin-top: 0.2rem;
 	 width: 60vw;
 	 height: 55vh;
-	border: 1px solid red;
-	background-image: url('@/assets/patterns/中国风边框1.png');
-	background-size: 10rem 6rem;
-	background-repeat: no-repeat;
 	display: flex;
+	flex-wrap: wrap;
  }
  .mirror-top-main-left-content-main{
 	 display: flex;
@@ -95,5 +116,10 @@
  .mirror-top-main-left-style-main{
 	 display: flex;
 	 flex-wrap: wrap;
+ }
+ #mirror-top-main-right-content-main-pic{
+	 position: absolute;
+	 top:0;
+	 left: 0;
  }
 </style>

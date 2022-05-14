@@ -1,7 +1,12 @@
 <template>
-	<view class="top">
-		
-		<pre>{{comp}}</pre>
+	<view class="top" :style="topStyle">
+		<image id="top-image"
+		 src="../../assets/buttons/中国风花边2：1按钮边框.png" mode="scaleToFill"
+		  :style="picStyle"
+		 />
+		<view id="top-word">
+			{{props.content}}
+		</view>
 	</view>
 </template>
 
@@ -10,11 +15,15 @@
 	const props=defineProps({
 		content:String
 	})
-	const comp=computed(()=>{
-		return props.content.length<3?
-		`  ${props.content}  `
-		:props.content
-	})
+
+	const picStyle={
+		width:`${props.content.length/2}rem`,
+		height:`0.7rem`
+	}
+	const topStyle={
+		width:`${props.content.length/2}rem`,
+		height:`0.7rem`
+	}
 </script>
 
 <style scoped>
@@ -23,16 +32,22 @@
 		src: url('../../assets/fonts/杨任东竹石体-Semibold.ttf');
 	}
 	.top{
+		position: relative;
 		font-family: Semibold;
-		background-image: url('@/assets/buttons/中国风花边2：1按钮边框.png');
-		background-size: contain;
-		background-repeat:no-repeat;
-		padding: 0.2rem;
 		margin: 0.2rem;
 		/* 单行显示 */
 		white-space: nowrap; 
 		font-weight: bold;
+		overflow: hidden;
+	}
+	#top-image{
+		position: absolute;
+	}
+	#top-word{
 		display: flex;
-		height: 0.5rem;
+		align-items: center;
+		justify-content: center;
+		/* 增加高度使文字垂直居中 */
+		height: 0.7rem;
 	}
 </style>
