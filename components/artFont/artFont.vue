@@ -1,7 +1,7 @@
 <template>
 	<view class="top" :style="topStyle">
 		<image id="top-image"
-		 src="../../assets/buttons/中国风花边2：1按钮边框.png" mode="scaleToFill"
+		 src="/static/buttons/buttonBorder.png" mode="scaleToFill"
 		  :style="picStyle"
 		 />
 		<view id="top-word">
@@ -29,7 +29,7 @@
 <style scoped>
 	@font-face {
 		font-family:Semibold ;
-		src: url('../../assets/fonts/杨任东竹石体-Semibold.ttf');
+		src: url('../../static/fonts/Semibold.ttf');
 	}
 	.top{
 		position: relative;

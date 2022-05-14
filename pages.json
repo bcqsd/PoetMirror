@@ -16,7 +16,7 @@
 	],
 	"globalStyle": {
 		"backgroundColor": "#F8F8F8",
-		"pageOrientation": "portrait",
+		"pageOrientation": "landscape",
 		"app-plus": {
 			"titleNView":false
 		}

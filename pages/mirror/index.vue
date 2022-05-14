@@ -1,9 +1,9 @@
 <template>
 	<view class="mirror-top">
-		<img id="mirror-top-image1" src="../../assets/buttons/返回主菜单按钮.png" alt="">
-		<img id="mirror-top-image2" src="../../assets/buttons/退出按钮.png" alt="">
+		<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
+		<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
 	    <view class="mirror-top-title">
-	    	<img src="../../assets/texturePics/“诗经小镜”.png" id="title">
+	    	<image src="/static/texturePics/poetMirror.png" id="title"/>
 	    </view>
 		<view class="mirror-top-main">
 			<view class="mirror-top-main-left">
@@ -26,7 +26,7 @@
 				<view class="mirror-top-main-right-content">
 					<view>当前标签:周南</view>
 					<view class="mirror-top-main-right-content-main">
-						<image src="../../assets/patterns/中国风边框1.png" mode="scaleToFill"
+						<image src="/static/patterns/chineseBord.png" mode="scaleToFill"
 						:style="picStyle"
 						id="mirror-top-main-right-content-main-pic"
 						/>
@@ -52,25 +52,27 @@
 <style lang="scss" scoped>
 	@font-face {
 		font-family:Semibold ;
-		src: url('../../assets/fonts/杨任东竹石体-Semibold.ttf');
+		src: url('@/static/fonts/Semibold.ttf');
 	}
 	#mirror-top-image1{
 		width: 1rem;
+		height: 1rem;
 		position: absolute;
-		top:1rem;
+		top:1.2rem;
 		right:3rem;
 	}
 	#mirror-top-image2{
 		width: 1rem;
+		height: 1rem;
 		position: absolute;
-		top:1rem;
+		top:1.2rem;
 		right:1.5rem;
 	}
  .mirror-top{
 	 width: 100%;
      height: 100vh;
 	 overflow: hidden;
-	 background-image: url('../../assets/textures/卷轴底色(1280×720).jpg');
+	 background-image: url('/static/textures/relumeBack.jpg');
 	 background-size: 100vw 100vh;
 	 color: brown;
 	 font-family: Semibold;
@@ -81,8 +83,9 @@
  }
  #title{
 	width:4rem;
+	height: 1rem;
 	margin-left: 2rem;
-	margin-top: 1rem;
+	margin-top: 1.5rem;
  }
  .mirror-top-main-left{
 	 width: 40vw;
