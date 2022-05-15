@@ -4,12 +4,16 @@
 	    	<view class="mirror-top-main">
 				<image id="title" src="/static/texturePics/indexpoet.png" mode=""></image>
 				<view class="mirror-top-intro">
-					<artFont content="走进《诗经》"/>
+					<artFont size=1 content="走进《诗经》"/>
 				</view>
 				<view class="mirror-top-intro-words">
 					{{intro}}
 				</view>
 	    	</view>
+		     <image class="pic1 pic" src="/static/illustration/butterfly.png" mode="scaleToFill"></image>
+			<image class="pic2 pic" src="/static/illustration/grass.png" mode="scaleToFill"></image>
+			<image class="pic3 pic" src="/static/patterns/blackdrow.png" mode="scaleToFill"></image>
+			<image class="pic4 pic" src="/static/illustration/flower.png" mode="scaleToFill"></image>
 	</view>	
 </template>
 
@@ -73,5 +77,32 @@
 	margin-left: 2rem;
 	margin-top: 1.5rem;
  }
-
+	.pic{
+		position: absolute;
+	}
+	.pic1{
+		left:10vw;
+		top:20vh;
+		width:10vw;
+		height:15vh;
+		transform: rotate(60deg);
+	}
+	.pic2{
+		left:10vw;
+		bottom:10vh;
+		width:10vw;
+		height:10vh;
+	}
+	.pic3{
+		right:10vw;
+		top:20vh;
+		width:10vw;
+		height:20vh;
+	}
+	.pic4{
+		right:10vw;
+		bottom:10vh;
+		width:10vw;
+		height:20vh;
+	}
 </style>

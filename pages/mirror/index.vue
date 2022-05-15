@@ -30,7 +30,9 @@
 						:style="picStyle"
 						id="mirror-top-main-right-content-main-pic"
 						/>
-						<artFont v-for="item in tags" :content="item"></artFont>
+						<view class="mirror-top-main-right-content-main-content">
+							<artFont v-for="item in tags" :content="item" size=0.5></artFont>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -102,6 +104,8 @@
  .mirror-top-main-left-style-main{
  	 display: flex;
  	 flex-wrap: wrap;
+	 margin:0.3rem 0;
+	 justify-content: space-between;
  }
  .mirror-top-main-right{
 	 box-sizing: border-box;
@@ -114,13 +118,19 @@
  .mirror-top-main-right-content{
 	 margin-top: 0.6rem;
  }
+ .mirror-top-main-right-content-main-content{
+	 display: flex;
+	 flex-wrap: wrap;
+	 padding: 0.5rem;
+	 justify-content: space-between;
+ }
  .mirror-top-main-right-content-main{
 	 margin-top: 0.2rem;
 	 position: relative;
 	 box-sizing: border-box;
-	 padding: 0.4rem;
+	 padding: 0.6rem 0.5rem;
 	 height: 55vh;
-	display: flex;
+	 display: flex;
 	flex-wrap: wrap;
  }
  #mirror-top-main-right-content-main-pic{

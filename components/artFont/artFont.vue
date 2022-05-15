@@ -1,10 +1,10 @@
 <template>
 	<view class="top" :style="topStyle">
 		<image id="top-image"
-		 src="/static/buttons/buttonBorder.png" mode="aspectFill"
+		 src="/static/buttons/buttonBorder.png" mode="scaleToFill"
 		  :style="picStyle"
 		 />
-		<view id="top-word" :style="wordStyle">
+		<view id="top-word"  :style="fontStyle" >
 			{{props.content}}
 		</view>
 	</view>
@@ -14,20 +14,21 @@
 	import {computed} from 'vue'
 	const props=defineProps({
 		content:String,
-		size:String
+		size:Number
 	})
-    const fontSize=props.size||'0.5rem';
-	const NfontSize=parseFloat(fontSize)
+    const width=(props.size ||1)*props.content.length +'rem'
+    const height=(props.size ||1)+'rem'
 	const picStyle={
 		width:'100%',
 		height:`100%`
 	}
 	const topStyle={
-		width:`${props.content.length*NfontSize}rem`,
-		height:`${NfontSize}rem`
+		width,
+		height
 	}
-	const wordStyle={
-		fontSize,
+	const fontSize=props.size*0.7
+	const fontStyle={
+		fontSize:fontSize+'rem'
 	}
 </script>
 
@@ -39,17 +40,17 @@
 	.top{
 		position: relative;
 		font-family: Semibold;
-		margin: 0.2rem;
-		padding: 0.1rem;
 		/* 单行显示 */
 		white-space: nowrap; 
 		font-weight: bold;
+		overflow: hidden;
 	}
 	#top-image{
 		position: absolute;
 	}
 	#top-word{
 		display: flex;
+		height: 100%;
 		align-items: center;
 		justify-content: center;
 	}

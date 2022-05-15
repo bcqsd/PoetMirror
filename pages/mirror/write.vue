@@ -19,10 +19,10 @@
 				正确答案：{{ans}}
 			</view>
 			<view class="mirror-top-main-continue">
-				<artFont content="继续"/>
+				<artFont size=1 content="继续"/>
 			</view>
 			<view class="mirror-top-main-return">
-				<artFont content="返回"/>
+				<artFont  content="返回"/>
 			</view>
 	    </view>
 	</view>	
