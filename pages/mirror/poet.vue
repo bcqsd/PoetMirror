@@ -1,7 +1,11 @@
 <template>
 	<view class="mirror-top">
-		<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
-		<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
+		<navigator url="/pages/index/index">
+			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
+		</navigator>
+		<navigator open-type="navigateBack" delta="1">
+			<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
+		</navigator>
 	    <view class="mirror-top-title">
 	    	<image src="/static/texturePics/poetMirror.png" id="title"/>
 	    </view>
@@ -25,7 +29,9 @@
 					<image src="/static/buttons/music.png" class="top-main-font" mode=""></image>
 					<image src="/static/buttons/sound.png" class="top-main-font" mode=""></image>
 					<image src="/static/buttons/delete.png" class="top-main-font" mode=""></image>
-					<image src="/static/buttons/write.png" class="top-main-font" mode=""></image>
+					<navigator url="/pages/mirror/write">
+						<image src="/static/buttons/write.png" class="top-main-font" mode=""></image>
+					</navigator>
 			</view>
 	    </view>
 	</view>	

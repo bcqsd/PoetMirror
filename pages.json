@@ -4,6 +4,9 @@
 			"path": "pages/index/index"
 		},
 		{
+			"path": "pages/index/entry"
+		},
+		{
 			"path": "pages/mirror/index"
 		},
 		{

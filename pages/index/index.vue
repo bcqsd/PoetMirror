@@ -1,11 +1,15 @@
 <template>
 	<view class="mirror-top">
-		<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
+		<navigator open-type="navigateBack" delta="1">
+			<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
+		</navigator>
 	    	<view class="mirror-top-main">
 				<image id="title" src="/static/texturePics/indexpoet.png" mode=""></image>
-				<view class="mirror-top-intro">
-					<artFont size=1 content="走进《诗经》"/>
-				</view>
+				<navigator url="/pages/index/entry">
+					<view class="mirror-top-intro">
+						<artFont size=1 content="走进《诗经》"/>
+					</view>
+				</navigator>
 				<view class="mirror-top-intro-words">
 					{{intro}}
 				</view>

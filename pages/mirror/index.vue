@@ -1,7 +1,11 @@
 <template>
 	<view class="mirror-top">
-		<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
-		<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
+		<navigator url="/pages/index/index">
+			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
+		</navigator>
+		<navigator open-type="navigateBack" delta="1">
+			<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
+		</navigator>
 	    <view class="mirror-top-title">
 	    	<image src="/static/texturePics/poetMirror.png" id="title"/>
 	    </view>
@@ -31,7 +35,7 @@
 						id="mirror-top-main-right-content-main-pic"
 						/>
 						<view class="mirror-top-main-right-content-main-content">
-							<artFont v-for="item in tags" :content="item" size=0.5></artFont>
+							<artFont v-for="item in tags" :content="item" size=0.5 @click="jumptoPoet()"></artFont>
 						</view>
 					</view>
 				</view>
@@ -48,6 +52,11 @@
 	const picStyle={
 		width:'45vw',
 		height:'55vh'
+	}
+	function jumptoPoet(){
+		uni.navigateTo({
+			url:'/pages/mirror/poet'
+		})
 	}
 </script>
 

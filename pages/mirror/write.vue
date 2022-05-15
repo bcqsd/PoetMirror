@@ -1,7 +1,11 @@
 <template>
 	<view class="mirror-top">
-		<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
-		<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
+		<navigator url="/pages/index/index">
+			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
+		</navigator>
+		<navigator open-type="navigateBack" delta="1">
+			<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
+		</navigator>
 	    <view class="mirror-top-title">
 	    	<image src="/static/texturePics/poetMirror.png" id="title"/>
 	    </view>
@@ -19,11 +23,13 @@
 				正确答案：{{ans}}
 			</view>
 			<view class="mirror-top-main-continue">
-				<artFont size=1 content="继续"/>
+				<artFont  content="继续"/>
 			</view>
-			<view class="mirror-top-main-return">
-				<artFont  content="返回"/>
-			</view>
+			<navigator url="/pages/mirror/poet">
+				<view class="mirror-top-main-return">
+					<artFont  content="返回"/>
+				</view>
+			</navigator>
 	    </view>
 	</view>	
 </template>
@@ -107,6 +113,7 @@
  }
 	 
  .mirror-top-main-continue{
+	 margin-top: 0.3rem;
 	 display: flex;
 	 justify-content: center;
  }
