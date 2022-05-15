@@ -5,9 +5,10 @@
 		},
 		{
 			"path": "pages/mirror/index"
-	
 		},
-		,
+		{
+			"path": "pages/mirror/write"
+		},
 		{
 			"path": "pages/mirror/poet"
 		},

@@ -14,7 +14,12 @@
 				<image class="top-main-font" src="/static/buttons/returnToMenu.png" mode=""></image>
 			</view>
 			<view class="top-main-middle">
-				
+				<view class="top-main-middle-title">
+					{{title}}
+				</view>
+				<view class="top-main-middle-content">
+					{{poet}}
+				</view>
 			</view>
 			<view class="top-main-right">
 					<image src="/static/buttons/music.png" class="top-main-font" mode=""></image>
@@ -31,6 +36,19 @@
 		width:'45vw',
 		height:'55vh'
 	}
+	const poet=`
+	   关关雎鸠，在河之洲。
+	   窈窕淑女，君子好逑。
+	   参差荇菜，左右流之。
+	   窈窕淑女，寤寐求之。
+	   求之不得，寤寐思服。
+	   悠哉悠哉，辗转反侧。
+	   参差荇菜，左右采之。
+	   窈窕淑女，琴瑟友之。
+	   参差荇菜，左右芼之。
+	   窈窕淑女，钟鼓乐之。
+	`
+	const title=`国风·周南·关雎`
 </script>
 
 <style lang="scss" scoped>
@@ -86,12 +104,24 @@
  }
  .top-main-middle{
 	 width: 70vw;
+	 color:black;
+ }
+ .top-main-middle-title{
+	 display: flex;
+    justify-content: center;
+	font-size: 0.8rem;
+ }
+ .top-main-middle-content{
+	 font-size: 0.6rem;
+	 padding: 5vw 8vw;
+	 background-color: rgba(218, 220, 210, 0.5);
  }
  .top-main-right{
 	 width: 10vw;
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 	 display: flex;
+	 align-items: center;
 	 flex-direction: column;
 	 justify-content: space-around;
  }
