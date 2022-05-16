@@ -14,9 +14,9 @@
 				<view class="mirror-top-main-left-content">
 					内容
 					<view class="mirror-top-main-left-content-main">
-						<artFont content="风"></artFont>
-						<artFont content="雅"></artFont>
-						<artFont content="颂"></artFont>
+						<ArtFont content="风"/>
+						<ArtFont content="雅"/>
+						<ArtFont content="颂"/>
 					</view>
 				</view>
 				<view class="mirror-top-main-left-style">
@@ -35,7 +35,7 @@
 						id="mirror-top-main-right-content-main-pic"
 						/>
 						<view class="mirror-top-main-right-content-main-content">
-							<artFont v-for="item in tags" :content="item" size=0.5 @click="jumptoPoet()"></artFont>
+							<ArtFont v-for="item in tags" :content="item" size=0.5 @click="jumptoPoet()"/>
 						</view>
 					</view>
 				</view>

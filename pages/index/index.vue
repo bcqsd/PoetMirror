@@ -7,7 +7,7 @@
 				<image id="title" src="/static/texturePics/indexpoet.png" mode=""></image>
 				<navigator url="/pages/index/entry">
 					<view class="mirror-top-intro">
-						<artFont size=1 content="走进《诗经》"/>
+						<ArtFont size=1 content="走进《诗经》"/>
 					</view>
 				</navigator>
 				<view class="mirror-top-intro-words">

@@ -19,6 +19,9 @@
 			"path": "pages/day/index"
 		},
 		{
+			"path": "pages/day/interpre"
+		},
+		{
 			"path": "pages/friends/index"
 		}
 	],

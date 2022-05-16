@@ -44,6 +44,7 @@
 		white-space: nowrap; 
 		font-weight: bold;
 		overflow: hidden;
+		color:brown;
 	}
 	#top-image{
 		position: absolute;

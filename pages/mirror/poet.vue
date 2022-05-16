@@ -11,10 +11,10 @@
 	    </view>
 		<view class="mirror-top-main">
 			<view class="top-main-left">
-				<artFont class="top-main-font" content="原文"/>
-				<artFont class="top-main-font" content="注释"/>
-				<artFont class="top-main-font" content="翻译"/>
-				<artFont class="top-main-font" content="赏析"/>
+				<ArtFont class="top-main-font" content="原文"/>
+				<ArtFont class="top-main-font" content="注释"/>
+				<ArtFont class="top-main-font" content="翻译"/>
+				<ArtFont class="top-main-font" content="赏析"/>
 				<image class="top-main-font" src="/static/buttons/returnToMenu.png" mode=""></image>
 			</view>
 			<view class="top-main-middle">

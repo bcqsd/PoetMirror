@@ -23,11 +23,11 @@
 				正确答案：{{ans}}
 			</view>
 			<view class="mirror-top-main-continue">
-				<artFont  content="继续"/>
+				<ArtFont  content="继续"/>
 			</view>
 			<navigator url="/pages/mirror/poet">
 				<view class="mirror-top-main-return">
-					<artFont  content="返回"/>
+					<ArtFont  content="返回"/>
 				</view>
 			</navigator>
 	    </view>
@@ -119,7 +119,7 @@
  }
   .mirror-top-main-return {
 	  display: flex;
-	  justify-content: end;
+	  justify-content: flex-end;
 	  margin-right: 5vw;
   }
  #title{
