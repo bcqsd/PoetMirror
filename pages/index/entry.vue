@@ -12,7 +12,9 @@
 				    <navigator url="/pages/day/index">
 						 <image class="div-img" src="/static/bookmark/second.jpg" mode=""></image>
 					</navigator>
-				    <image class="div-img" src="/static/bookmark/third.jpg" mode=""></image>
+				    <navigator url="/pages/friends/index">
+						<image class="div-img" src="/static/bookmark/third.jpg" mode=""></image>
+					</navigator>
 				</view>
 				<image class="pic2 pic" src="/static/patterns/blackdrow.png" mode="scaleToFill"></image>
 	    	</view>
