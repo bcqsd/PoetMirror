@@ -87,7 +87,6 @@
 	 width: 100%;
      height: 100vh;
 	 overflow: hidden;
-	  @include bg($bg1);
 	 background-size: 100vw 100vh;
 	 color: brown;
 	 font-family: Semibold;

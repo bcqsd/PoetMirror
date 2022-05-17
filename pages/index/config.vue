@@ -8,12 +8,15 @@
 		</navigator>
 		<view class="mirror-top-main">
 		     <view class="mirror-top-main-item">
-				 <view>主题选择</view>
+				 <view>主题选择{{index}}</view>
 				<scroll-view 
 				:scroll-top="RefScrollTop" @scroll="chooseTheme($event)" scroll-y="true" class="item-scroll">
 					<view id="ind" v-for="(item,ind) in themes">{{item}}</view>
 				</scroll-view>
 		     </view>
+			<navigator  url="/pages/index/config">
+				 <ArtFont id="confirm" content="确定"></ArtFont>
+			</navigator>
 		</view>
 	</view>
 </template>
@@ -34,10 +37,12 @@
     const top_main_style=ref({
 		backgroundImage:theme
 	})
+	const index=ref(1)
 	const RefScrollTop=computed(()=>store.state.theme.RefScrollTop)
 	function chooseTheme(e){
          let scrollTop=e.detail.scrollTop
 	     let ind=Math.floor((scrollTop)/20)
+		 index.value=ind+1
 		 let theme=`url("${themeMap[ind]}")`
 		 let prevTheme=uni.getStorageSync("theme")
 		 if(!prevTheme||prevTheme!==theme){
@@ -47,6 +52,7 @@
 			 })
 			store.commit('theme/changeBackgroundImage',theme)
 			store.commit('theme/changeScrollTop',scrollTop)
+			
 		 }
 	}
 </script>
@@ -99,5 +105,10 @@
 		 height: 0.6rem;
 		 width: 3rem;
 	 }
+ }
+ #confirm{
+	 position: absolute;
+	 top:60%;
+	 left:50%;
  }
 </style>

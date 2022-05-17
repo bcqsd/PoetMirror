@@ -22,7 +22,7 @@
 				<view class="mirror-top-main-left-style">
 					体裁
 					<view class="mirror-top-main-left-style-main">
-						<artFont v-for="item in poetStyles" :content="item"></artFont>
+						<ArtFont v-for="item in poetStyles" :content="item" size=0.5 />
 					</view>
 				</view>
 			</view>
@@ -90,7 +90,6 @@
 	 width: 100%;
      height: 100vh;
 	 overflow: hidden;
-	  @include bg($bg1);
 	 background-size: 100vw 100vh;
 	 color: brown;
 	 font-family: Semibold;
@@ -116,13 +115,17 @@
  }
  .mirror-top-main-left-style{
  	 margin-top: 0.3rem;
+	 height: 100%;
+	 &-main{
+		 height: 60%;
+		 width: 80%;
+		 display: flex;
+		 flex-wrap: wrap;
+		 margin:0.3rem 0;
+		 justify-content: space-between;
+	 }
  }
- .mirror-top-main-left-style-main{
- 	 display: flex;
- 	 flex-wrap: wrap;
-	 margin:0.3rem 0;
-	 justify-content: space-between;
- }
+
  .mirror-top-main-right{
 	 box-sizing: border-box;
 	 width: 60vw;
