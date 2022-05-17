@@ -1,5 +1,5 @@
 <template>
-	<view class="mirror-top">
+	<view class="mirror-top" :style="top_main_style">
 		<navigator url="/pages/index/index">
 			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
 		</navigator>
@@ -58,7 +58,13 @@
 </template>
 
 <script setup>
-	import {ref} from 'vue'
+	import {computed,ref} from 'vue'
+	import {useStore} from  'vuex'
+	const store=useStore()
+	const theme=computed(()=>store.state.theme.backgroundImage)
+	const top_main_style=ref({
+		backgroundImage:theme
+	})
 	const score=80
 	const arr=['心','亦','烈','忧','我','之','何','止','孔',]
 	const arrTrue=ref(new Array(4).fill(''))

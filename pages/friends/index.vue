@@ -1,5 +1,5 @@
 <template>
-	<view class="mirror-top">
+	<view class="mirror-top" :style="top_main_style">
 		<image id="yishihuiyou" src="/static/background/yishihuiyou.png" mode=""></image>
 		<navigator url="/pages/index/index">
 			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
@@ -28,7 +28,13 @@
 </template>
 
 <script setup>
-	
+	import {computed,ref} from 'vue'
+	import {useStore} from  'vuex'
+	const store=useStore()
+	const theme=computed(()=>store.state.theme.backgroundImage)
+	const top_main_style=ref({
+		backgroundImage:theme
+	})
 </script>
 
 <style lang="scss" scoped>

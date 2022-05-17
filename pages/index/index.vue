@@ -1,5 +1,5 @@
 <template>
-	<view class="mirror-top">
+	<view class="mirror-top" :style="top_main_style">
 		<navigator url="/pages/index/config">
 			<image id="mirror-top-image1" src="/static/buttons/download.png" alt=""/>
 		</navigator>
@@ -25,6 +25,13 @@
 </template>
 
 <script setup>
+	import {computed,ref} from 'vue'
+	import {useStore} from  'vuex'
+	const store=useStore()
+	const theme=computed(()=>store.state.theme.backgroundImage)
+	const top_main_style=ref({
+		backgroundImage:theme
+	})
 	const picStyle={
 		width:'45vw',
 		height:'55vh'
@@ -59,7 +66,6 @@
 	 width: 100%;
      height: 100vh;
 	 overflow: hidden;
-	  @include bg($bg1);
 	 background-size: 100vw 100vh;
 	 font-family: Semibold;
 	 font-size: 0.35rem;

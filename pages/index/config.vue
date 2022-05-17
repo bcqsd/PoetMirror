@@ -1,5 +1,5 @@
 <template>
-	<view class="mirror-top" >
+	<view class="mirror-top" :style="top_main_style">
 		<navigator url="/pages/index/index">
 			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
 		</navigator>
@@ -9,8 +9,9 @@
 		<view class="mirror-top-main">
 		     <view class="mirror-top-main-item">
 				 <view>主题选择</view>
-				<scroll-view @scroll="chooseTheme($event)" scroll-y="true" class="item-scroll">
-					<view v-for="item in themes">{{item}}</view>
+				<scroll-view 
+				:scroll-top="RefScrollTop" @scroll="chooseTheme($event)" scroll-y="true" class="item-scroll">
+					<view id="ind" v-for="(item,ind) in themes">{{item}}</view>
 				</scroll-view>
 		     </view>
 		</view>
@@ -18,25 +19,34 @@
 </template>
 
 <script setup>
-	import {ref} from 'vue'
-	const themes=['卷轴','红木','木质','羊皮纸']
+	import {ref,computed} from 'vue'
+	import {useStore} from 'vuex'
+	const store=useStore()
+	const themes=['黑白','卷轴','红木','木质','羊皮纸']
 	const themeMap=[
+		'',
 	'/static/textures/relumeBack.jpg',
 	'/static/textures/Wood1.jpg',
 	'/static/textures/Wood2.jpg',
 	'/static/textures/yangpi.jpg',
 	]
-
+	const theme=computed(()=>store.state.theme.backgroundImage)
+    const top_main_style=ref({
+		backgroundImage:theme
+	})
+	const RefScrollTop=computed(()=>store.state.theme.RefScrollTop)
 	function chooseTheme(e){
          let scrollTop=e.detail.scrollTop
-	     let ind=Math.floor((scrollTop)/20)+1;
-		 let theme=`bg${ind}`
+	     let ind=Math.floor((scrollTop)/20)
+		 let theme=`url("${themeMap[ind]}")`
 		 let prevTheme=uni.getStorageSync("theme")
-		 console.log(prevTheme)
 		 if(!prevTheme||prevTheme!==theme){
-			 uni.setStorage("theme",theme)
-			 window.document.documentElement.setAttribute('theme',theme)
-			 console.log(theme)
+			 uni.setStorage({
+				 key:"theme",
+				 data:theme
+			 })
+			store.commit('theme/changeBackgroundImage',theme)
+			store.commit('theme/changeScrollTop',scrollTop)
 		 }
 	}
 </script>
@@ -64,7 +74,6 @@
 	 width: 100%;
      height: 100vh;
 	 overflow: hidden;
-	 @include bg($bg1);
 	 background-size: 100vw 100vh;
 	 font-family: Semibold;
 	 font-size: 0.35rem;

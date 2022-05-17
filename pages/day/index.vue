@@ -1,5 +1,5 @@
 <template>
-	<view class="mirror-top">
+	<view class="mirror-top" :style="top_main_style">
 		<navigator url="/pages/index/index">
 			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
 		</navigator>
@@ -32,6 +32,13 @@
 </template>
 
 <script setup>
+	import {computed,ref} from 'vue'
+	import {useStore} from  'vuex'
+	const store=useStore()
+	const theme=computed(()=>store.state.theme.backgroundImage)
+	const top_main_style=ref({
+		backgroundImage:theme
+	})
 	const desc=`清晨，新的一天开始了。妻子会对躺在身旁的丈夫说:`
 	const opts=[
 		`东方之日兮，彼姝者子，在我室兮。`,

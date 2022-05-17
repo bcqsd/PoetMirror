@@ -1,5 +1,5 @@
 <template>
-	<view class="mirror-top">
+	<view class="mirror-top" :style="top_main_style">
 		<navigator url="/pages/index/index">
 			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
 		</navigator>
@@ -45,6 +45,13 @@
 </template>
 
 <script setup>
+	import {computed,ref} from 'vue'
+	import {useStore} from  'vuex'
+	const store=useStore()
+	const theme=computed(()=>store.state.theme.backgroundImage)
+	const top_main_style=ref({
+		backgroundImage:theme
+	})
 	const poetStyles=['婚恋诗','战争诗','行役诗','怨刺诗','农事诗','宗庙诗','赞颂诗']
 	const tags=['国风.周南.关睱','国风.周南.寒光',
 	'国风.周南.关睱','国风.周南.免置','国风.周南.关睱',

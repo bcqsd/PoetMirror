@@ -14,7 +14,7 @@
 	import {computed} from 'vue'
 	const props=defineProps({
 		content:String,
-		size:Number
+		size:String
 	})
     const width=(props.size ||1)*props.content.length +'rem'
     const height=(props.size ||1)+'rem'
@@ -26,7 +26,7 @@
 		width,
 		height
 	}
-	const fontSize=props.size*0.7
+	const fontSize=parseFloat(props.size)*0.7
 	const fontStyle={
 		fontSize:fontSize+'rem'
 	}
