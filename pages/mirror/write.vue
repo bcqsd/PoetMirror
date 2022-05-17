@@ -3,7 +3,7 @@
 		<navigator url="/pages/index/index">
 			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
 		</navigator>
-		<navigator open-type="navigateBack" delta="1">
+		<navigator open-type="navigateBack" :delta="1">
 			<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
 		</navigator>
 	    <view class="mirror-top-title">

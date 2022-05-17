@@ -31,9 +31,10 @@
          let scrollTop=e.detail.scrollTop
 	     let ind=Math.floor((scrollTop)/20)+1;
 		 let theme=`bg${ind}`
-		 let prevTheme=localStorage.getItem('theme')
+		 let prevTheme=uni.getStorageSync("theme")
+		 console.log(prevTheme)
 		 if(!prevTheme||prevTheme!==theme){
-			 localStorage.setItem('theme',theme)
+			 uni.setStorage("theme",theme)
 			 window.document.documentElement.setAttribute('theme',theme)
 			 console.log(theme)
 		 }
