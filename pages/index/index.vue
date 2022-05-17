@@ -1,5 +1,8 @@
 <template>
 	<view class="mirror-top">
+		<navigator url="/pages/index/config">
+			<image id="mirror-top-image1" src="/static/buttons/download.png" alt=""/>
+		</navigator>
 		<navigator open-type="navigateBack" delta="1">
 			<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
 		</navigator>
@@ -37,6 +40,13 @@
 	@font-face {
 		font-family:Semibold ;
 		src: url('@/static/fonts/Semibold.ttf');
+	}
+	#mirror-top-image1{
+		width: 1rem;
+		height: 1rem;
+		position: absolute;
+		top:1.2rem;
+		right:3rem;
 	}
 	#mirror-top-image2{
 		width: 5vw;

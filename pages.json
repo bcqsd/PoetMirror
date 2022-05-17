@@ -7,6 +7,9 @@
 			"path": "pages/index/entry"
 		},
 		{
+			"path": "pages/index/config"
+		},
+		{
 			"path": "pages/mirror/index"
 		},
 		{
@@ -29,7 +32,7 @@
 		},
 		{
 			"path": "pages/friends/fly"
-		},
+		}
 	],
 	"globalStyle": {
 		"backgroundColor": "#F8F8F8",
