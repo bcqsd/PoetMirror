@@ -80,7 +80,7 @@
 	 width: 100%;
      height: 100vh;
 	 overflow: hidden;
-	 background-image: url('/static/textures/relumeBack.jpg');
+	  @include bg($bg1);
 	 background-size: 100vw 100vh;
 	 color: brown;
 	 font-family: Semibold;

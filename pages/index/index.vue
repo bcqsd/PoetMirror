@@ -3,7 +3,7 @@
 		<navigator url="/pages/index/config">
 			<image id="mirror-top-image1" src="/static/buttons/download.png" alt=""/>
 		</navigator>
-		<navigator open-type="navigateBack" delta="1">
+		<navigator open-type="navigateBack" :delta="1">
 			<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
 		</navigator>
 	    	<view class="mirror-top-main">
@@ -59,7 +59,7 @@
 	 width: 100%;
      height: 100vh;
 	 overflow: hidden;
-	 background-image: url('/static/textures/relumeBack.jpg');
+	  @include bg($bg1);
 	 background-size: 100vw 100vh;
 	 font-family: Semibold;
 	 font-size: 0.35rem;

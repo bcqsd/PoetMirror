@@ -3,7 +3,7 @@
 		<navigator url="/pages/index/index">
 			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
 		</navigator>
-		<navigator open-type="navigateBack" delta="1">
+		<navigator open-type="navigateBack" delta=1>
 			<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
 		</navigator>
 	    <view class="mirror-top-title">
@@ -25,7 +25,7 @@
 				 		{{item}}
 				 	</view>
 				 </view>
-			 	<view class="mid-ans">
+			 	<view v-show="right==1" class="mid-ans">
 			 		{{review}}
 			 	</view>
 			 </view>
@@ -48,7 +48,7 @@
 				 	<view class="right-score">
 				 		得分: {{score}}
 				 	</view>
-				 	<view class="right-continue">
+				 	<view @click="retry" class="right-continue">
 				 		{{right==1?'继续':'重来'}}
 				 	</view>
 				 </view>
@@ -79,7 +79,11 @@
 			}
 		}
 	}
-	
+	function retry(){
+		arrTrue.value=new Array(4).fill('')
+		index=0;
+		right.value=0;
+	}
 </script>
 
 <style lang="scss" scoped>
@@ -109,7 +113,7 @@
 	 width: 100%;
      height: 100vh;
 	 overflow: hidden;
-	 background-image: url('/static/textures/relumeBack.jpg');
+	 @include bg($bg1);
 	 background-size: 100vw 100vh;
 	 font-family: Semibold;
 	 font-size: 0.35rem;

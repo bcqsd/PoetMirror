@@ -1,9 +1,9 @@
 <template>
-	<view class="mirror-top" :style="style">
+	<view class="mirror-top" >
 		<navigator url="/pages/index/index">
 			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
 		</navigator>
-		<navigator open-type="navigateBack" delta="1">
+		<navigator open-type="navigateBack" :delta="1">
 			<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
 		</navigator>
 		<view class="mirror-top-main">
@@ -26,18 +26,16 @@
 	'/static/textures/Wood2.jpg',
 	'/static/textures/yangpi.jpg',
 	]
-	const style=ref({
-		backgroundImage:`url(${themeMap[0]})`
-	})
+
 	function chooseTheme(e){
          let scrollTop=e.detail.scrollTop
-	     let ind=Math.floor((scrollTop)/20);
-		 let url=themeMap[ind]
-		 let prevUrl=localStorage.getItem('themeUrl')
-		 if(!prevUrl||prevUrl!==url){
-			 localStorage.setItem('themeUrl',url)
-			 style.value.backgroundImage=`url(${url})`
-			 console.log(style.value.backgroundImage)
+	     let ind=Math.floor((scrollTop)/20)+1;
+		 let theme=`bg${ind}`
+		 let prevTheme=localStorage.getItem('theme')
+		 if(!prevTheme||prevTheme!==theme){
+			 localStorage.setItem('theme',theme)
+			 window.document.documentElement.setAttribute('theme',theme)
+			 console.log(theme)
 		 }
 	}
 </script>
@@ -65,7 +63,7 @@
 	 width: 100%;
      height: 100vh;
 	 overflow: hidden;
-	 // background-image: url('/static/textures/relumeBack.jpg');
+	 @include bg($bg1);
 	 background-size: 100vw 100vh;
 	 font-family: Semibold;
 	 font-size: 0.35rem;
