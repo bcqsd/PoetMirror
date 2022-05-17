@@ -1,6 +1,5 @@
 <template>
 	<view class="mirror-top">
-		<image id="yishihuiyou" src="/static/background/yishihuiyou.png" mode=""></image>
 		<navigator url="/pages/index/index">
 			<image id="mirror-top-image1" src="/static/buttons/return.png" alt=""/>
 		</navigator>
@@ -8,21 +7,19 @@
 			<image id="mirror-top-image2" src="/static/buttons/exit.png" alt=""/>
 		</navigator>
 	    <view class="mirror-top-title">
-	    	<image src="/static/texturePics/meetfriends.png" id="title"/>
+	    	<image src="/static/texturePics/connect.png" id="title"/>
+			<view class="mirror-top-title-text">
+				请从以下九个字中识别一句《诗经》中四个字的诗句:
+			</view>
 	    </view>
 		<view class="mirror-top-main">
-			<navigator url="/pages/friends/connect">
-				<view class="pic-container">
-					<image class="pic" src="/static/contest/lianzichengshi.png" mode=""></image>
-					连字成诗
-				</view>
-			</navigator>
-			<navigator url="/pages/friends/fly">
-				<view class="pic-container">
-					<image class="pic" src="/static/contest/feihualing.png" mode=""></image>
-					飞花令
-				</view>
-			</navigator>
+	          <image class="mirror-top-main-left" src="/static/illustration/suneye.png" mode="scaleToFill"/>
+			 <view class="mirror-top-main-mid">
+			 	
+			 </view>
+			 <view class="mirror-top-main-right">
+			 	 
+			 </view>
 		</view>
 	</view>
 </template>
@@ -61,25 +58,30 @@
  }
  .mirror-top-main{
 	 box-sizing: border-box;
-	 padding: 10vh 10vw;
  	 width: 90vw;
- 	 height: 60vh;
+ 	 height: 65vh;
  	 margin-left: 5vw;
  	 margin-right: 5vw;
 	 display: flex;
-	 justify-content: space-around;
 	 
  }
- .pic-container{
+ .mirror-top-title-text{
+	 font-size: 0.4rem;
 	 display: flex;
-	 flex-direction: column;
-	 width: 100%;
-	 height: 100%;
-	 align-items: center;
+	 justify-content: center;
  }
-.pic{
-	width: 15vw;
-	height: 30vh;
+.mirror-top-main-left{
+	padding-top: 10vh;
+	margin-left: 5vw;
+	width: 20%;
+	height: 60%;
+	overflow: hidden;
+}
+.mirror-top-main-mid{
+	flex:1
+}
+.mirror-top-main-right{
+	flex:1
 }
  #title{
 	width:4rem;
@@ -87,14 +89,5 @@
 	margin-left: 2rem;
 	margin-top: 1.5rem;
  }
-#viewKnowledge{
-	margin-left: 70%;
-}
-#yishihuiyou{
-	position: absolute;
-	top:20vh;
-	left: 15vw;
-	width: 50vw;
-	height: 70vh;
-}
+
 </style>

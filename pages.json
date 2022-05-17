@@ -23,7 +23,13 @@
 		},
 		{
 			"path": "pages/friends/index"
-		}
+		},
+		{
+			"path": "pages/friends/connect"
+		},
+		{
+			"path": "pages/friends/fly"
+		},
 	],
 	"globalStyle": {
 		"backgroundColor": "#F8F8F8",
